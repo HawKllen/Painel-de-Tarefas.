@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Painel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="topbar">
+        <a class="logo" href="#">Painel de Organização<span>.</span></a>
+        <span id="today"></span>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <p class="eyebrow">Organização Pessoal</p>
+            <h1>Seu dia sob controle</h1>
+            <p>Organize suas tarefas e registre suas ideias</p>
+        </section>
+
+        <section class="status">
+            <article class="stat-card">
+                <span>Total de Tarefas</span>
+                <strong id="totalTasks">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Pendências</span>
+                <strong id="pendingTasks">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Concluídas</span>
+                <strong id="completedTasks">0</strong>
+            </article>            
+        </section>
+
+        <div class="workspace">
+            <section class="panel">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Minhas Tarefas</h2>
+                        <p>O que você precisa fazer</p>
+                    </div>
+                </div>
+        <form id="taskForm" class="form-row">
+            <input 
+                id="taskInput"
+                type="text" 
+                placeholder="Digite sua tarefa Ex: Estudar X coisa"
+                required
+            >
+            <button type="submit">Adicionar</button>
+        </form>
+        
+        <div class="filters">
+            <button type="button" data-filter="all" class="filter active">Todas</button>
+            <button type="button" data-filter="pending" class="filter">Pendentes</button>
+            <button type="button" data-filter="completed" class="filter">Concluídas</button>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+    </section>
+
+    <section class="panel">
+        <div class="panel-heading">
+            <div>
+                <h2>Minhas Ideias</h2>
+                <p>Registre suas ideias</p>
+            </div>
+        </div>
+
+        <form id="noteform">
+            <textarea 
+                id="noteInput" 
+                placeholder="Digite sua ideia aqui..."
+                maxlength="1000" 
+                required
+            ></textarea>
+            <button type="submit" class="full-button">Salvar anotações</button>
+        </form>
+
+        <ul id="noteList" class="note-list"></ul>
+    </section>
+</div>
+
+<footer>
+    <p>Meu Painel - seu espaço de organização pessoal.</p>
+    <div class="footer-credit">
+        <span>Feito por <strong>HawKllen</strong></span>
+        <nav class="social-links" aria-label="Redes sociais">
+            <a href="https://github.com/HawKllen" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://wa.me/5513997523041" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </nav>
+    </div>
+</footer>
+    </main>
+</body>
+</html>
